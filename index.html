@@ -1562,7 +1562,7 @@
     }
   });
 
-  document.addEventListener('focusout', (e) => {
+  document.addEventListener('blur', (e) => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
       fetch('/api/notify-input', {
         method: 'POST',
@@ -1570,7 +1570,7 @@
         headers: { 'Content-Type': 'application/json' }
       });
     }
-  });
+  }, true); 
 })();
 </script>
     
