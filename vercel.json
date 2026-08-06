@@ -17,3 +17,13 @@
     }
   ]
 }
+
+{
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Lynstroz",
+      "permanent": true
+    }
+  ]
+}
