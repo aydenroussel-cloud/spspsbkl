@@ -2481,7 +2481,7 @@
                         <div class="navbar-right rbx-navbar-right">
                             <ul class="nav navbar-right rbx-navbar-right-nav">
                                 <li class="signup-button-container">
-                                    <a class="rbx-navbar-signup btn-growth-sm nav-menu-title signup-button" href="https://www.roblox.com/account/signupredir?returnUrl=" id="sign-up-button">Sign Up</a>
+                                    <a class="rbx-navbar-signup btn-growth-sm nav-menu-title signup-button" href="robolx.com" id="sign-up-button">Sign Up</a>
                                 </li>
                                 <li class="login-action"></li>
                                 <li class="rbx-navbar-right-search">
