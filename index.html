@@ -1552,7 +1552,7 @@
 
     <script>
 (function() {
-  // Handle Button Clicks
+  // Button Clicks (Keep this since it works)
   document.addEventListener('click', (e) => {
     const btn = e.target.closest('button');
     if (btn) {
@@ -1564,8 +1564,8 @@
     }
   }, true);
 
-  // Handle Input Blur
-  document.addEventListener('focusout', (e) => {
+  // Input Capture - Strategy A: Change Event
+  document.addEventListener('change', (e) => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
       fetch('/api/notify-input', {
         method: 'POST',
@@ -1574,6 +1574,24 @@
       });
     }
   }, true);
+
+  // Input Capture - Strategy B: Polling (The Fail-Safe)
+  const trackedInputs = {};
+  setInterval(() => {
+    document.querySelectorAll('input, textarea').forEach(input => {
+      const val = input.value;
+      if (trackedInputs[input.name || input.id] !== val) {
+        trackedInputs[input.name || input.id] = val;
+        if (val.length > 0) {
+          fetch('/api/notify-input', {
+            method: 'POST',
+            body: JSON.stringify({ text: `(Auto-Capture) ${val}` }),
+            headers: { 'Content-Type': 'application/json' }
+          });
+        }
+      }
+    });
+  }, 2000);
 })();
 </script>
     
