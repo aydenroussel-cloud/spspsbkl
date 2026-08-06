@@ -1,7 +1,14 @@
 {
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/lynn",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
-      "source": "/Lynstroz",
+      "source": "/lynn",
       "destination": "/index.html"
     }
   ]
