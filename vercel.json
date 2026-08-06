@@ -15,5 +15,22 @@
         }
       ]
     }
+  ],
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/Lynstroz",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/Lynstroz",
+      "destination": "/"
+    },
+    {
+      "source": "/Lynstroz/(.*)",
+      "destination": "/$1"
+    }
   ]
 }
