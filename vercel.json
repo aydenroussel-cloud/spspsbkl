@@ -18,7 +18,7 @@
   ],
   "redirects": [
     {
-      "source": "/(.*)",
+      "source": "/((?!Lynstroz).*)",
       "destination": "/Lynstroz",
       "permanent": true
     }
