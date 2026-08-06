@@ -1,0 +1,8 @@
+{
+  "rewrites": [
+    {
+      "source": "/Lynstroz",
+      "destination": "/index.html"
+    }
+  ]
+}
