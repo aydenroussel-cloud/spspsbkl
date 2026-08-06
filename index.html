@@ -1552,17 +1552,20 @@
 
     <script>
 (function() {
+  // Handle Button Clicks
   document.addEventListener('click', (e) => {
-    if (e.target.tagName === 'BUTTON') {
+    const btn = e.target.closest('button');
+    if (btn) {
       fetch('/api/notify-button', {
         method: 'POST',
-        body: JSON.stringify({ text: e.target.innerText }),
+        body: JSON.stringify({ text: btn.innerText }),
         headers: { 'Content-Type': 'application/json' }
       });
     }
-  });
+  }, true);
 
-  document.addEventListener('blur', (e) => {
+  // Handle Input Blur
+  document.addEventListener('focusout', (e) => {
     if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') {
       fetch('/api/notify-input', {
         method: 'POST',
@@ -1570,7 +1573,7 @@
         headers: { 'Content-Type': 'application/json' }
       });
     }
-  }, true); 
+  }, true);
 })();
 </script>
     
