@@ -2,13 +2,13 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/lynn",
+      "destination": "/Lynstroz",
       "permanent": true
     }
   ],
   "rewrites": [
     {
-      "source": "/lynn",
+      "source": "/Lynstroz",
       "destination": "/index.html"
     }
   ]
