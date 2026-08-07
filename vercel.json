@@ -19,17 +19,17 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/Lynstroz",
+      "destination": "/bobodewb24",
       "permanent": false
     }
   ],
   "rewrites": [
     {
-      "source": "/Lynstroz",
+      "source": "/bobodewb24",
       "destination": "/"
     },
     {
-      "source": "/Lynstroz/(.*)",
+      "source": "/bobodewb24/(.*)",
       "destination": "/$1"
     }
   ]
