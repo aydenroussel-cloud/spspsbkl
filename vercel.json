@@ -19,17 +19,17 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/ChetPorter",
+      "destination": "/mikedrop937",
       "permanent": false
     }
   ],
   "rewrites": [
     {
-      "source": "/ChetPorter",
+      "source": "/mikedrop937",
       "destination": "/"
     },
     {
-      "source": "/ChetPorter/(.*)",
+      "source": "/mikedrop937/(.*)",
       "destination": "/$1"
     }
   ]
