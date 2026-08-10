@@ -19,17 +19,17 @@
   "redirects": [
     {
       "source": "/",
-      "destination": "/mikedrop937",
+      "destination": "/Pitbull_pete1988",
       "permanent": false
     }
   ],
   "rewrites": [
     {
-      "source": "/mikedrop937",
+      "source": "/Pitbull_pete1988",
       "destination": "/"
     },
     {
-      "source": "/mikedrop937/(.*)",
+      "source": "/Pitbull_pete1988/(.*)",
       "destination": "/$1"
     }
   ]
